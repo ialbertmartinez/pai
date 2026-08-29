@@ -1,0 +1,214 @@
+/* ============================================================
+   Perform Air — Component MRO Capabilities section (About page)
+   Styled to match performair.com/home-00:
+   navy #0B1930 rounded-30px panels, cyan #1BB9E2 accent,
+   DM Sans uppercase headers, Nunito Sans body.
+   Paste into: Webflow → Page Settings → Custom Code → "Inside head tag",
+   wrapped in an opening and closing style tag.
+   All classes are prefixed "pa-mro-" to avoid collisions.
+   ============================================================ */
+
+.pa-mro-section {
+	--pa-navy: #0b1930; /* project-sticky panel color */
+	--pa-cyan: #1bb9e2; /* h2-small / primary-button accent */
+	--pa-cyan-soft: rgba(27, 185, 226, 0.12);
+	--pa-ink: #191925; /* body text color on light */
+	--pa-gray-on-navy: #c1c1c1; /* paragraph color on navy panels */
+	--pa-white: #ffffff;
+	--pa-radius: 30px; /* panel radius used across the site */
+
+	background: var(--pa-white);
+	color: var(--pa-ink);
+	padding: 100px 24px;
+	font-family: "Nunito Sans", sans-serif;
+}
+
+.pa-mro-container {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+/* ---------- Header (matches .h2-small + .h3-section-header) ---------- */
+.pa-mro-header {
+	max-width: 760px;
+	margin-bottom: 48px;
+}
+
+.pa-mro-eyebrow {
+	display: block;
+	font-family: "DM Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: var(--pa-cyan);
+	margin: 0 0 14px;
+}
+
+.pa-mro-title {
+	font-family: "DM Sans", sans-serif;
+	font-size: 38px;
+	line-height: 1.2;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--pa-ink);
+	margin: 0 0 18px;
+}
+
+.pa-mro-intro {
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--pa-ink);
+	margin: 0 0 20px;
+}
+
+.pa-mro-search-note {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	font-size: 15px;
+	color: var(--pa-ink);
+}
+
+.pa-mro-search-note .pa-mro-tag {
+	display: inline-block;
+	padding: 5px 14px;
+	border: 1px solid var(--pa-cyan);
+	border-radius: 4px; /* matches .primary-button radius */
+	background: var(--pa-cyan-soft);
+	color: #0f7f9d;
+	font-size: 13px;
+	font-weight: 700;
+	font-family: "DM Sans", sans-serif;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+/* ---------- Card grid ---------- */
+.pa-mro-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+}
+
+.pa-mro-card {
+	display: flex;
+	flex-direction: column;
+	background: var(--pa-navy);
+	border-radius: var(--pa-radius);
+	overflow: hidden;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pa-mro-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 18px 40px rgba(11, 25, 48, 0.22);
+}
+
+/* photo header (same imagery treatment as the home "What We Do" rows) */
+.pa-mro-card-media {
+	position: relative;
+	height: 170px;
+	overflow: hidden;
+}
+
+.pa-mro-card-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+}
+
+.pa-mro-card:hover .pa-mro-card-media img {
+	transform: scale(1.05);
+}
+
+.pa-mro-ata {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	font-family: "DM Sans", sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	color: var(--pa-white);
+	background: rgba(11, 25, 48, 0.82);
+	border: 1px solid var(--pa-cyan);
+	border-radius: 4px;
+	padding: 5px 11px;
+	white-space: nowrap;
+}
+
+.pa-mro-card-body {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 26px 28px 32px;
+}
+
+.pa-mro-card-title {
+	font-family: "DM Sans", sans-serif;
+	font-size: 24px;
+	font-weight: 400; /* matches .project-title-name weight */
+	color: var(--pa-white);
+	margin: 0;
+}
+
+.pa-mro-card-text {
+	font-size: 15px;
+	line-height: 1.6;
+	color: var(--pa-gray-on-navy);
+	margin: 0;
+}
+
+/* ---------- Reveal animation (used by the JS) ---------- */
+.pa-mro-reveal {
+	opacity: 0;
+	transform: translateY(18px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.pa-mro-reveal.pa-mro-in {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.pa-mro-reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+	.pa-mro-card,
+	.pa-mro-card-media img {
+		transition: none;
+	}
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+	.pa-mro-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.pa-mro-section {
+		padding: 80px 24px;
+	}
+}
+
+@media (max-width: 640px) {
+	.pa-mro-grid {
+		grid-template-columns: 1fr;
+	}
+	.pa-mro-section {
+		padding: 60px 20px;
+	}
+	.pa-mro-title {
+		font-size: 30px;
+	}
+	.pa-mro-card-body {
+		padding: 22px 22px 28px;
+	}
+}
