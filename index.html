@@ -7,134 +7,274 @@
 		<link rel="stylesheet" href="./mro-capabilities.css" />
 	</head>
 	<body>
-		<h1>MRO Capabilities Page</h1>
-		<section class="pa-mro-section" id="capabilities">
-			<div class="pa-mro-container">
-				<header class="pa-mro-header pa-mro-reveal">
-					<span class="pa-mro-eyebrow">What We Do</span>
-					<h2 class="pa-mro-title">Component MRO Capabilities</h2>
-					<p class="pa-mro-intro">
-						Perform Air provides repair, overhaul and testing services across five primary aircraft component
-						categories.
-					</p>
-				</header>
-			</div>
-		</section>
+		<!-- ============================================================
+     Perform Air International — About Us page (full page markup)
+     Layout A + Layout B's certifications band.
+     Requires pai-about.css (head) and pai-about.js (before /body)
+     loaded via jsDelivr — see the setup guide.
+     If your Webflow plan's embed character limit is 10,000, split
+     this file into two Embed elements at the SPLIT marker below —
+     just keep both halves inside their own
+     <div class="pa-about"> ... </div> wrapper as marked.
+     ============================================================ -->
 
-		<section class="pa-mro-section" id="capabilities">
-			<div class="pa-mro-container">
-				<header class="pa-mro-header pa-mro-reveal">
-					<span class="pa-mro-eyebrow">What We Do</span>
-					<h2 class="pa-mro-title">Component MRO Capabilities</h2>
-					<p class="pa-mro-intro">
-						Perform Air provides repair, overhaul and testing services across five primary aircraft component
-						categories.
+		<div class="pa-about">
+			<!-- HERO -->
+			<section class="pa-hero">
+				<div class="pa-wrap">
+					<span class="pa-eyebrow">About Us</span>
+					<h1>Keeping Global Air Fleets Operating at Peak Performance Since 1987</h1>
+					<p class="pa-lead">
+						Perform Air International provides specialized repair and overhaul services for critical aircraft
+						components. Our team supports a wide range of systems across commercial and military aviation,
+						delivering consistent quality, clear communication, and dependable service at every stage.
 					</p>
-					<div class="pa-mro-search-note">
-						<span>Every capability is searchable by</span>
-						<span class="pa-mro-tag">Part Number</span>
-						<span class="pa-mro-tag">ATA Chapter</span>
-						<span class="pa-mro-tag">Aircraft Type</span>
+					<div class="pa-statbar pa-reveal">
+						<div class="pa-stat"><b>1987</b><span>Serving Aviation Since</span></div>
+						<div class="pa-stat"><b>5</b><span>Component Categories</span></div>
+						<div class="pa-stat"><b>4</b><span>Global Certifications</span></div>
+						<div class="pa-stat"><b>2</b><span>Commercial &amp; Military</span></div>
 					</div>
-				</header>
-
-				<div class="pa-mro-grid">
-					<article class="pa-mro-card pa-mro-reveal">
-						<div class="pa-mro-card-media">
-							<img
-								src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a91f3422f2e03024a2a305f_Hydraulics.jpeg"
-								alt="Hydraulic aircraft components"
-								loading="lazy"
-							/>
-							<span class="pa-mro-ata">ATA 29</span>
-						</div>
-						<div class="pa-mro-card-body">
-							<h3 class="pa-mro-card-title">Hydraulics</h3>
-							<p class="pa-mro-card-text">
-								Repair, overhaul and testing of hydraulic components used throughout critical aircraft systems,
-								including servo actuators, control valves, hydraulic pumps, accumulators, reservoirs, flight
-								control components and other fluid power applications.
-							</p>
-						</div>
-					</article>
-
-					<article class="pa-mro-card pa-mro-reveal">
-						<div class="pa-mro-card-media">
-							<img
-								src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a91fa6cb201535d54909754_pneumatics.jpg"
-								alt="Pneumatic aircraft components"
-								loading="lazy"
-							/>
-							<span class="pa-mro-ata">ATA 36</span>
-						</div>
-						<div class="pa-mro-card-body">
-							<h3 class="pa-mro-card-title">Pneumatics</h3>
-							<p class="pa-mro-card-text">
-								Comprehensive support for pneumatic components including pressure regulating valves, shutoff
-								valves, check valves, flow control valves, pressure sensors, and environmental and airflow
-								system components.
-							</p>
-						</div>
-					</article>
-
-					<article class="pa-mro-card pa-mro-reveal">
-						<div class="pa-mro-card-media">
-							<img
-								src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a91ef1b46783df257981afe_fuel.jpg"
-								alt="Aircraft fuel system components"
-								loading="lazy"
-							/>
-							<span class="pa-mro-ata">ATA 28</span>
-						</div>
-						<div class="pa-mro-card-body">
-							<h3 class="pa-mro-card-title">Fuel</h3>
-							<p class="pa-mro-card-text">
-								Repair, overhaul and testing of fuel system components including boost and transfer pumps, fuel
-								valves, fuel de-icing valves and related mechanical assemblies.
-							</p>
-						</div>
-					</article>
-
-					<article class="pa-mro-card pa-mro-reveal">
-						<div class="pa-mro-card-media">
-							<img
-								src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a90933acfa09edf60822d45_Electro-Mechanical.jpg"
-								alt="Electro-mechanical aircraft components"
-								loading="lazy"
-							/>
-							<span class="pa-mro-ata">ATA 24 &amp; 27</span>
-						</div>
-						<div class="pa-mro-card-body">
-							<h3 class="pa-mro-card-title">Electro&#8209;Mechanical</h3>
-							<p class="pa-mro-card-text">
-								Specialized repair and overhaul of components combining electrical and mechanical systems,
-								including AC and DC motors, motor-driven actuators, contactors, switches, blowers, cooling fans
-								and related control assemblies.
-							</p>
-						</div>
-					</article>
-
-					<article class="pa-mro-card pa-mro-reveal">
-						<div class="pa-mro-card-media">
-							<img
-								src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a91ef03a66d9a5f933bcc2d_waterandwaste.jpg"
-								alt="Aircraft water and waste system components"
-								loading="lazy"
-							/>
-							<span class="pa-mro-ata">ATA 38</span>
-						</div>
-						<div class="pa-mro-card-body">
-							<h3 class="pa-mro-card-title">Water &amp; Waste</h3>
-							<p class="pa-mro-card-text">
-								Repair and overhaul support for aircraft water and waste system components, including potable
-								water tanks and valves, vacuum waste tanks, water heaters, flush valves, drain masts, pumps and
-								related assemblies used throughout commercial aircraft.
-							</p>
-						</div>
-					</article>
 				</div>
-			</div>
-		</section>
+			</section>
+
+			<!-- STORY -->
+			<section class="pa-story">
+				<div class="pa-wrap pa-cols">
+					<div class="pa-reveal">
+						<span class="pa-eyebrow">Who We Are</span>
+						<h2>Precision Component Repair Backed by Experience</h2>
+						<p>
+							From our facility in Gilbert, Arizona, Perform Air International supports operators, MROs and
+							distributors around the world. FAA, EASA and globally certified, we specialize in hydraulic,
+							pneumatic, electro-mechanical, fuel, and water and waste systems for the commercial and military
+							aviation industries.
+						</p>
+						<p>Built on consistency, transparency, and long-term partnerships.</p>
+					</div>
+					<img
+						class="pa-reveal"
+						src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a91f3422f2e03024a2a305f_Hydraulics.jpeg"
+						alt="Perform Air component repair"
+						loading="lazy"
+					/>
+				</div>
+			</section>
+
+			<!-- CAPABILITIES -->
+			<section class="pa-caps" id="capabilities">
+				<div class="pa-wrap">
+					<div class="pa-reveal">
+						<span class="pa-eyebrow">What We Do</span>
+						<h2>Component MRO Capabilities</h2>
+						<p class="pa-lead">
+							Perform Air provides repair, overhaul and testing services across five primary aircraft component
+							categories.
+						</p>
+						<div class="pa-tags">
+							<span>Every capability is searchable by</span><span class="pa-tag">Part Number</span
+							><span class="pa-tag">ATA Chapter</span><span class="pa-tag">Aircraft Type</span>
+						</div>
+					</div>
+					<div class="pa-grid">
+						<article class="pa-card pa-reveal">
+							<div class="pa-card-media">
+								<img
+									src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a91f3422f2e03024a2a305f_Hydraulics.jpeg"
+									alt="Hydraulic aircraft components"
+									loading="lazy"
+								/><span class="pa-ata">ATA 29</span>
+							</div>
+							<div class="pa-card-body">
+								<h3>Hydraulics</h3>
+								<p>
+									Repair, overhaul and testing of hydraulic components used throughout critical aircraft
+									systems, including servo actuators, control valves, hydraulic pumps, accumulators,
+									reservoirs, flight control components and other fluid power applications.
+								</p>
+							</div>
+						</article>
+						<article class="pa-card pa-reveal">
+							<div class="pa-card-media">
+								<img
+									src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a91fa6cb201535d54909754_pneumatics.jpg"
+									alt="Pneumatic aircraft components"
+									loading="lazy"
+								/><span class="pa-ata">ATA 36</span>
+							</div>
+							<div class="pa-card-body">
+								<h3>Pneumatics</h3>
+								<p>
+									Comprehensive support for pneumatic components including pressure regulating valves, shutoff
+									valves, check valves, flow control valves, pressure sensors, and environmental and airflow
+									system components.
+								</p>
+							</div>
+						</article>
+						<article class="pa-card pa-reveal">
+							<div class="pa-card-media">
+								<img
+									src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a91ef1b46783df257981afe_fuel.jpg"
+									alt="Aircraft fuel system components"
+									loading="lazy"
+								/><span class="pa-ata">ATA 28</span>
+							</div>
+							<div class="pa-card-body">
+								<h3>Fuel</h3>
+								<p>
+									Repair, overhaul and testing of fuel system components including boost and transfer pumps,
+									fuel valves, fuel de-icing valves and related mechanical assemblies.
+								</p>
+							</div>
+						</article>
+						<article class="pa-card pa-reveal">
+							<div class="pa-card-media">
+								<img
+									src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a90933acfa09edf60822d45_Electro-Mechanical.jpg"
+									alt="Electro-mechanical aircraft components"
+									loading="lazy"
+								/><span class="pa-ata">ATA 24 &amp; 27</span>
+							</div>
+							<div class="pa-card-body">
+								<h3>Electro&#8209;Mechanical</h3>
+								<p>
+									Specialized repair and overhaul of components combining electrical and mechanical systems,
+									including AC and DC motors, motor-driven actuators, contactors, switches, blowers, cooling
+									fans and related control assemblies.
+								</p>
+							</div>
+						</article>
+						<article class="pa-card pa-reveal">
+							<div class="pa-card-media">
+								<img
+									src="https://cdn.prod.website-files.com/6941c77c4b400f3a0aad7e1d/6a91ef03a66d9a5f933bcc2d_waterandwaste.jpg"
+									alt="Aircraft water and waste system components"
+									loading="lazy"
+								/><span class="pa-ata">ATA 38</span>
+							</div>
+							<div class="pa-card-body">
+								<h3>Water &amp; Waste</h3>
+								<p>
+									Repair and overhaul support for aircraft water and waste system components, including potable
+									water tanks and valves, vacuum waste tanks, water heaters, flush valves, drain masts, pumps
+									and related assemblies used throughout commercial aircraft.
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- ==================== SPLIT: if needed, end Embed 1 here and start Embed 2 below ==================== -->
+		<div class="pa-about">
+			<!-- PRINCIPLES -->
+			<section class="pa-princ">
+				<div class="pa-wrap">
+					<span class="pa-eyebrow">Operational Principles</span>
+					<h2>Why Perform Air</h2>
+					<p class="pa-sub">Built on consistency, transparency, and long-term partnerships.</p>
+					<div class="pa-princ-row">
+						<div class="pa-princ-item pa-reveal">
+							<b>Quality</b>
+							<h4>Strict Standards &amp; Consistent Results</h4>
+							<p>
+								Every component is handled to exact regulatory requirements and customer specifications,
+								ensuring dependable, repeatable performance.
+							</p>
+						</div>
+						<div class="pa-princ-item pa-reveal">
+							<b>Service</b>
+							<h4>Direct Access to Experienced Teams</h4>
+							<p>
+								Working closely with you to assess requirements, provide technical insight, and responsive
+								communication.
+							</p>
+						</div>
+						<div class="pa-princ-item pa-reveal">
+							<b>Pricing</b>
+							<h4>Clear &amp; Transparent Quotes</h4>
+							<p>
+								Pricing is based on defined scope and detailed evaluation, with open communication throughout
+								the entire process.
+							</p>
+						</div>
+						<div class="pa-princ-item pa-reveal">
+							<b>Reliability</b>
+							<h4>Delivery You Can Plan Around</h4>
+							<p>
+								Our focus is on consistent, dependable timelines that support operational needs with
+								uncompromising quality.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CERTIFICATIONS (Layout B band) -->
+			<section class="pa-certs">
+				<div class="pa-wrap">
+					<span class="pa-eyebrow">Our Certifications</span>
+					<h2>Certified to Support Global Aviation Standards</h2>
+					<p class="pa-sub">
+						Approved and authorized to perform maintenance, repair, and overhaul services across multiple
+						international regulatory bodies.
+					</p>
+					<div class="pa-clist">
+						<div class="pa-citem pa-reveal">
+							<h4>FAA Repair Station</h4>
+							<p>
+								Maintenance, repair, and inspection services in compliance with Federal Aviation Administration
+								regulations under 14 CFR Part 145.
+							</p>
+							<a href="#">View Certification</a>
+						</div>
+						<div class="pa-citem pa-reveal">
+							<h4>EASA Repair Station</h4>
+							<p>
+								EASA Part-145 approval in accordance with EU Aviation Safety Agency requirements under the
+								U.S./EU bilateral agreement.
+							</p>
+							<a href="#">View Certification</a>
+						</div>
+						<div class="pa-citem pa-reveal">
+							<h4>CAAC Repair Station</h4>
+							<p>
+								Authorized maintenance and repair services in compliance with Civil Aviation Administration of
+								China requirements.
+							</p>
+							<a href="#">View Certification</a>
+						</div>
+						<div class="pa-citem pa-reveal">
+							<h4>UK CAA Repair Station</h4>
+							<p>
+								Maintenance, repair, and related services in accordance with UK Civil Aviation Authority
+								regulations.
+							</p>
+							<a href="#">View Certification</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA -->
+			<section class="pa-cta">
+				<div class="pa-wrap">
+					<div class="pa-cta-panel pa-reveal">
+						<div>
+							<h2>Need support for a component?</h2>
+							<p>
+								Connect with our team to request a quote or discuss your requirements. We are ready to support
+								your operation with reliable, certified repair services.
+							</p>
+						</div>
+						<div class="pa-cta-actions">
+							<a class="pa-btn pa-btn-solid" href="#">Get a Quote</a>
+							<a class="pa-btn pa-btn-line" href="#">Call Our Support Team</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
 		<script defer src="./mro-capabilities.js" type="text/javascript"></script>
 	</body>
 </html>

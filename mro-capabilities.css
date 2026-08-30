@@ -1,30 +1,42 @@
-.pa-mro-section {
-	--pa-navy: #0b1930; /* project-sticky panel color */
-	--pa-cyan: #1bb9e2; /* h2-small / primary-button accent */
-	--pa-cyan-soft: rgba(27, 185, 226, 0.12);
-	--pa-ink: #191925; /* body text color on light */
-	--pa-gray-on-navy: #c1c1c1; /* paragraph color on navy panels */
-	--pa-white: #ffffff;
-	--pa-radius: 30px; /* panel radius used across the site */
+/* ============================================================
+   Perform Air International — About Us page (full page)
+   Layout A (editorial) with Layout B's certifications band.
+   Matches performair.com/home-00 brand tokens.
+   Load via jsDelivr in the page head (see setup guide).
+   Everything is scoped under .pa-about to avoid collisions
+   with existing Webflow classes.
+   ============================================================ */
 
-	background: var(--pa-white);
-	color: var(--pa-ink);
-	padding: 100px 24px;
+.pa-about {
+	--pa-navy: #0b1930;
+	--pa-cyan: #1bb9e2;
+	--pa-cyan-soft: rgba(27, 185, 226, 0.12);
+	--pa-ink: #191925;
+	--pa-gray-navy: #c1c1c1;
+	--pa-light: #eeeeee;
+	--pa-white: #ffffff;
+	--pa-r: 30px;
+
 	font-family: "Nunito Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--pa-ink);
+	background: var(--pa-white);
 }
 
-.pa-mro-container {
+.pa-about *,
+.pa-about *::before,
+.pa-about *::after {
+	box-sizing: border-box;
+}
+
+.pa-wrap {
 	max-width: 1080px;
 	margin: 0 auto;
+	padding: 0 24px;
 }
 
-/* ---------- Header (matches .h2-small + .h3-section-header) ---------- */
-.pa-mro-header {
-	max-width: 760px;
-	margin-bottom: 48px;
-}
-
-.pa-mro-eyebrow {
+.pa-eyebrow {
 	display: block;
 	font-family: "DM Sans", sans-serif;
 	font-size: 16px;
@@ -35,37 +47,144 @@
 	margin: 0 0 14px;
 }
 
-.pa-mro-title {
+.pa-about h1,
+.pa-about h2 {
 	font-family: "DM Sans", sans-serif;
-	font-size: 38px;
-	line-height: 1.2;
-	font-weight: 700;
 	text-transform: uppercase;
+	font-weight: 700;
+	margin: 0;
 	color: var(--pa-ink);
-	margin: 0 0 18px;
 }
 
-.pa-mro-intro {
+.pa-btn {
+	display: inline-block;
+	font-family: "Nunito Sans", sans-serif;
 	font-size: 16px;
-	line-height: 1.6;
-	color: var(--pa-ink);
+	padding: 12px 28px;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: 0.2s;
+}
+.pa-btn-solid {
+	background: var(--pa-cyan);
+	color: var(--pa-white);
+	border: 1px solid var(--pa-cyan);
+}
+.pa-btn-solid:hover {
+	background: #14a5cb;
+}
+.pa-btn-line {
+	background: transparent;
+	color: var(--pa-white);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.pa-btn-line:hover {
+	border-color: var(--pa-cyan);
+	color: var(--pa-cyan);
+}
+
+/* ---------- Hero ---------- */
+.pa-hero {
+	background: var(--pa-white);
+	padding: 110px 24px 70px;
+}
+.pa-hero h1 {
+	font-size: clamp(36px, 5vw, 54px);
+	line-height: 1.12;
+	max-width: 820px;
+}
+.pa-hero .pa-lead {
+	max-width: 640px;
+	font-size: 17px;
+	margin: 22px 0 0;
+}
+
+.pa-statbar {
+	background: var(--pa-navy);
+	border-radius: var(--pa-r);
+	margin-top: 56px;
+	padding: 38px 30px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+}
+.pa-stat {
+	text-align: center;
+	border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+.pa-stat:last-child {
+	border-right: 0;
+}
+.pa-stat b {
+	display: block;
+	font-family: "DM Sans", sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	color: var(--pa-white);
+	line-height: 1.1;
+}
+.pa-stat span {
+	display: block;
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: var(--pa-cyan);
+	margin-top: 8px;
+	font-family: "DM Sans", sans-serif;
+	font-weight: 700;
+}
+
+/* ---------- Story ---------- */
+.pa-story {
+	background: var(--pa-light);
+	padding: 90px 24px;
+}
+.pa-story .pa-cols {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 60px;
+	align-items: center;
+}
+.pa-story h2 {
+	font-size: 34px;
+	line-height: 1.2;
+}
+.pa-story img {
+	width: 100%;
+	height: 380px;
+	object-fit: cover;
+	border-radius: var(--pa-r);
+	display: block;
+	background: var(--pa-navy);
+}
+
+/* ---------- Capabilities (card grid) ---------- */
+.pa-caps {
+	background: var(--pa-white);
+	padding: 100px 24px;
+}
+.pa-caps h2 {
+	font-size: 38px;
+	line-height: 1.2;
+	margin-bottom: 18px;
+}
+.pa-caps .pa-lead {
+	max-width: 720px;
 	margin: 0 0 20px;
 }
 
-.pa-mro-search-note {
+.pa-tags {
 	display: inline-flex;
 	flex-wrap: wrap;
-	align-items: center;
 	gap: 10px;
+	align-items: center;
+	margin-bottom: 48px;
 	font-size: 15px;
-	color: var(--pa-ink);
 }
-
-.pa-mro-search-note .pa-mro-tag {
-	display: inline-block;
+.pa-tag {
 	padding: 5px 14px;
 	border: 1px solid var(--pa-cyan);
-	border-radius: 4px; /* matches .primary-button radius */
+	border-radius: 4px;
 	background: var(--pa-cyan-soft);
 	color: #0f7f9d;
 	font-size: 13px;
@@ -76,47 +195,39 @@
 	white-space: nowrap;
 }
 
-/* ---------- Card grid ---------- */
-.pa-mro-grid {
+.pa-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 24px;
 }
-
-.pa-mro-card {
+.pa-card {
+	background: var(--pa-navy);
+	border-radius: var(--pa-r);
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	background: var(--pa-navy);
-	border-radius: var(--pa-radius);
-	overflow: hidden;
-	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	transition: transform 0.25s, box-shadow 0.25s;
 }
-
-.pa-mro-card:hover {
+.pa-card:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 18px 40px rgba(11, 25, 48, 0.22);
 }
-
-/* photo header (same imagery treatment as the home "What We Do" rows) */
-.pa-mro-card-media {
+.pa-card-media {
 	position: relative;
 	height: 170px;
 	overflow: hidden;
 }
-
-.pa-mro-card-media img {
+.pa-card-media img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	display: block;
-	transition: transform 0.4s ease;
+	transition: transform 0.4s;
 }
-
-.pa-mro-card:hover .pa-mro-card-media img {
+.pa-card:hover .pa-card-media img {
 	transform: scale(1.05);
 }
-
-.pa-mro-ata {
+.pa-ata {
 	position: absolute;
 	top: 14px;
 	right: 14px;
@@ -129,76 +240,234 @@
 	border: 1px solid var(--pa-cyan);
 	border-radius: 4px;
 	padding: 5px 11px;
-	white-space: nowrap;
 }
-
-.pa-mro-card-body {
+.pa-card-body {
+	padding: 26px 28px 32px;
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
-	padding: 26px 28px 32px;
 }
-
-.pa-mro-card-title {
+.pa-card-body h3 {
 	font-family: "DM Sans", sans-serif;
 	font-size: 24px;
-	font-weight: 400; /* matches .project-title-name weight */
+	font-weight: 400;
 	color: var(--pa-white);
 	margin: 0;
 }
-
-.pa-mro-card-text {
+.pa-card-body p {
 	font-size: 15px;
-	line-height: 1.6;
-	color: var(--pa-gray-on-navy);
+	color: var(--pa-gray-navy);
 	margin: 0;
 }
 
-/* ---------- Reveal animation (used by the JS) ---------- */
-.pa-mro-reveal {
+/* ---------- Principles (navy band) ---------- */
+.pa-princ {
+	background: var(--pa-navy);
+	padding: 100px 24px;
+}
+.pa-princ h2 {
+	color: var(--pa-white);
+	font-size: 38px;
+	margin-bottom: 14px;
+}
+.pa-princ .pa-sub {
+	color: var(--pa-gray-navy);
+	margin: 0 0 52px;
+	max-width: 560px;
+}
+.pa-princ-row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+}
+.pa-princ-item {
+	border-top: 2px solid var(--pa-cyan);
+	padding-top: 22px;
+}
+.pa-princ-item b {
+	display: block;
+	font-family: "DM Sans", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: var(--pa-cyan);
+	margin-bottom: 10px;
+}
+.pa-princ-item h4 {
+	font-family: "DM Sans", sans-serif;
+	font-size: 19px;
+	font-weight: 500;
+	color: var(--pa-white);
+	margin: 0 0 10px;
+}
+.pa-princ-item p {
+	font-size: 14.5px;
+	color: var(--pa-gray-navy);
+	margin: 0;
+}
+
+/* ---------- Certifications (navy band, horizontal list — from Layout B) ---------- */
+.pa-certs {
+	background: var(--pa-navy);
+	padding: 100px 24px;
+}
+.pa-certs h2 {
+	color: var(--pa-white);
+	font-size: 34px;
+	margin-bottom: 14px;
+}
+.pa-certs .pa-sub {
+	color: var(--pa-gray-navy);
+	max-width: 640px;
+	margin: 0 0 48px;
+}
+.pa-clist {
+	display: flex;
+	flex-direction: column;
+}
+.pa-citem {
+	display: grid;
+	grid-template-columns: 220px 1fr auto;
+	gap: 28px;
+	align-items: center;
+	padding: 26px 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.pa-citem:last-child {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.pa-citem h4 {
+	font-family: "DM Sans", sans-serif;
+	font-size: 19px;
+	font-weight: 500;
+	color: var(--pa-white);
+	margin: 0;
+}
+.pa-citem p {
+	font-size: 14.5px;
+	color: var(--pa-gray-navy);
+	margin: 0;
+}
+.pa-citem a {
+	color: var(--pa-cyan);
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+	font-family: "DM Sans", sans-serif;
+	white-space: nowrap;
+}
+.pa-citem a:hover {
+	text-decoration: underline;
+}
+
+/* ---------- CTA ---------- */
+.pa-cta {
+	padding: 100px 24px;
+	background: var(--pa-white);
+}
+.pa-cta-panel {
+	background: var(--pa-navy);
+	border-radius: var(--pa-r);
+	padding: 70px 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 40px;
+	flex-wrap: wrap;
+}
+.pa-cta-panel h2 {
+	color: var(--pa-white);
+	font-size: 30px;
+	max-width: 480px;
+	text-transform: none;
+	font-weight: 500;
+}
+.pa-cta-panel p {
+	color: var(--pa-gray-navy);
+	margin: 10px 0 0;
+	max-width: 480px;
+}
+.pa-cta-actions {
+	display: flex;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+/* ---------- Reveal animation ---------- */
+.pa-reveal {
 	opacity: 0;
 	transform: translateY(18px);
 	transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
-.pa-mro-reveal.pa-mro-in {
+.pa-reveal.pa-in {
 	opacity: 1;
 	transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.pa-mro-reveal {
+	.pa-reveal {
 		opacity: 1;
 		transform: none;
 		transition: none;
 	}
-	.pa-mro-card,
-	.pa-mro-card-media img {
+	.pa-card,
+	.pa-card-media img {
 		transition: none;
 	}
 }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 991px) {
-	.pa-mro-grid {
+	.pa-statbar {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	.pa-mro-section {
-		padding: 80px 24px;
+	.pa-stat:nth-child(2) {
+		border-right: 0;
+	}
+	.pa-story .pa-cols {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+	.pa-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.pa-princ-row {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.pa-citem {
+		grid-template-columns: 1fr;
+		gap: 10px;
 	}
 }
-
 @media (max-width: 640px) {
-	.pa-mro-grid {
+	.pa-grid,
+	.pa-princ-row,
+	.pa-statbar {
 		grid-template-columns: 1fr;
 	}
-	.pa-mro-section {
-		padding: 60px 20px;
+	.pa-stat {
+		border-right: 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+		padding-bottom: 18px;
 	}
-	.pa-mro-title {
-		font-size: 30px;
+	.pa-stat:last-child {
+		border-bottom: 0;
 	}
-	.pa-mro-card-body {
-		padding: 22px 22px 28px;
+	.pa-hero {
+		padding: 80px 20px 56px;
+	}
+	.pa-caps,
+	.pa-princ,
+	.pa-certs {
+		padding: 70px 20px;
+	}
+	.pa-cta {
+		padding: 70px 20px;
+	}
+	.pa-cta-panel {
+		padding: 46px 30px;
 	}
 }

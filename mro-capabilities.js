@@ -1,21 +1,17 @@
 /* ============================================================
-   Perform Air — Component MRO Capabilities section
-   Paste into: Webflow → Page Settings → Custom Code →
-   "Before body tag", wrapped in an opening and closing script tag
-   Staggered scroll-reveal for the header and cards.
-   Degrades gracefully: with no JS (or reduced motion),
-   everything is simply visible.
+   Perform Air International — About Us page
+   Staggered scroll-reveal for elements with class "pa-reveal".
+   Load via jsDelivr before the closing body tag (see setup guide).
+   Degrades gracefully: with no JS or reduced motion, everything
+   is simply visible.
    ============================================================ */
 
 (function () {
-  var items = document.querySelectorAll(".pa-mro-reveal");
+  var items = document.querySelectorAll(".pa-reveal");
   if (!items.length) return;
 
-  // No IntersectionObserver (very old browsers): just show everything.
   if (!("IntersectionObserver" in window)) {
-    items.forEach
-      ? items.forEach(show)
-      : Array.prototype.forEach.call(items, show);
+    Array.prototype.forEach.call(items, show);
     return;
   }
 
@@ -24,7 +20,6 @@
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         var el = entry.target;
-        // Stagger siblings that enter together
         var delay = (parseInt(el.getAttribute("data-pa-index"), 10) || 0) * 90;
         setTimeout(function () {
           show(el);
@@ -41,6 +36,6 @@
   });
 
   function show(el) {
-    el.classList.add("pa-mro-in");
+    el.classList.add("pa-in");
   }
 })();
