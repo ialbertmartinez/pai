@@ -6,7 +6,6 @@
    Everything is scoped under .pa-about to avoid collisions
    with existing Webflow classes.
    ============================================================ */
-
 .pa-about {
 	--pa-navy: #0b1930;
 	--pa-cyan: #1bb9e2;
@@ -28,6 +27,10 @@
 .pa-about *::before,
 .pa-about *::after {
 	box-sizing: border-box;
+}
+
+.pa-about p {
+	color: var(--dark);
 }
 
 .pa-wrap {
